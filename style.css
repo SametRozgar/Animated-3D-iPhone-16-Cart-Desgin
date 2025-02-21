@@ -1,29 +1,40 @@
 body {
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #000000;
     color: #fff;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
 }
 
 .wrapper {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
     align-items: center;
-    padding: 0 20px;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 40px;
 }
 
-#container {
-    width: 500px;
-    height: 700px;
-    margin-right: 50px;
+.container {
+    width: 100%;
+    height: 500px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .info-panel {
-    max-width: 400px;
+    width: 100%;
+    max-width: 300px;
     padding: 20px;
     background-color: #1e1e1e;
     border-radius: 15px;
@@ -43,12 +54,12 @@ body {
     font-size: 16px;
     color: #aaa;
     font-weight: 400;
-    line-height: 1.6; 
+    line-height: 1.6;
 }
 
 .price {
-    font-size: 32px; 
-    font-weight: 700; 
+    font-size: 32px;
+    font-weight: 700;
     color: #f8f8f8;
     margin-bottom: 20px;
     letter-spacing: 1px;
@@ -63,7 +74,7 @@ body {
     margin-bottom: 10px;
     font-size: 14px;
     color: #ccc;
-    font-weight: 500; 
+    font-weight: 500;
     letter-spacing: 0.3px;
 }
 
@@ -81,7 +92,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    letter-spacing: 0.5px; 
+    letter-spacing: 0.5px;
 }
 
 .add-to-cart:hover {
@@ -91,4 +102,17 @@ body {
 
 .add-to-cart ion-icon {
     margin-right: 10px;
+}
+
+
+@media (min-width: 768px) {
+    .wrapper {
+        flex-direction: row;
+        max-width: 1200px;
+    }
+
+    .container {
+        width: 500px;
+        height: 700px;
+    }
 }
